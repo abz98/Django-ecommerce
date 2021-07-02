@@ -1,0 +1,61 @@
+<div class="card" style="width: 17rem;">
+<img class="card-img-top" src="{% static "pic/" %}{{li.title}}.png" alt="Card image cap">
+<div class="card-body">
+<a href="item/{{li.id}}">  <h5 class="card-title">{{li.title}}</h5></a>
+<p class="card-text"> {{li.describe}}</p>
+<a href="item/{{li.id}}" class="btn btn-primary">View</a>
+</div>
+</div>
+
+
+
+
+
+ran=['bg-primary mb-3','bg-secondary mb-3','bg-success mb-3','bg-danger mb-3','bg-warning mb-3','bg-info mb-3','bg-light mb-3','bg-dark mb-3']
+
+
+
+card auto color:
+<div class="card text-white {{pick}}" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<img class="card-img-top" src="{% static "ic/" %}{{li.title}}.png" alt="Card image cap">
+
+<h5 class="card-title">{{li.title}}</h5>
+<p class="card-text"> {{li.describe}}</p>
+</div>
+</div>
+
+not auto:
+<div class="card-deck">
+  <div class="card" style="width: 17rem;">
+    <img class="card-img-top" src="{% static "pic/" %}{{li.title}}.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{li.title}}</h5>
+      <p class="card-text">{{li.describe}}</p>
+      <p class="card-text"><small class="text-muted">Added</small></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+footer auto:
+<div class="card-deck">
+  <div class="card">
+  <img class="card-img-top" src="{% static "pic/" %}{{li.title}}.png" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">{{li.title}}</h5>
+    <p class="card-text">{{li.describe}}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>

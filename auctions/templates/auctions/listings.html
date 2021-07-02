@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+ {%block body %}
+<h1>Listing</h1>
+ {% for li in list %}
+
+  <h2>{{li.title}}</h2>
+  <p>{{li.describe}}</p>
+  {% endfor %}
+
+
+{% endblock%}

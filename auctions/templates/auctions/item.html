@@ -1,0 +1,31 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    <form action=""  method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      {%if list.bid is None%}
+         <strong>no BID</strong>
+      {% else %}
+        <strong>The bid is {{list.bid}}$</strong>
+      {% endif %}
+      {{form}}
+
+      <input type="submit"  class="tn btn-success" value="Add">
+
+</form>
+
+     <h2>{{list.title}} and {{list.date}}</h2>
+     <img src="{% static "pic/" %}{{list.title}}.png" alt="title" class="rounded mx-auto d-block" style="width:500px;height:400px;" </img>
+     <p>{{list.describe}}</p>
+
+
+
+{% endblock %}
+<div class="row">
+  <div class="col-lg-12 gallery">
+
+  </div>
+</div>

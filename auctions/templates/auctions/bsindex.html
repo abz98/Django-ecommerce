@@ -1,0 +1,26 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block body %}
+    <h2>Active Listings</h2>
+     {% for li in list %}
+     <div class="card-deck" >
+       <div class="card" style="width: 17rem;">
+       <img class="card-img-top" src="{% static "pic/" %}{{li.title}}.png" alt="Card image cap">
+         <div class="card-body">
+      <a href="item/{{li.id}}">   <h5 class="card-title">{{li.title}}</h5></a>
+         <p class="card-text">{{li.describe}}</p>
+         </div>
+         <div class="card-footer">
+           <small class="text-muted"><strong>Created on:{{li.date}}</strong>{{li.bid}}</small>
+
+           <small class="text-muted"><strong>Bid:</strong>{{li.bid}}</small>
+         </div>
+       </div>
+
+
+     {%empty%}
+      <p> No listing</p>
+     {% endfor %}
+
+
+{% endblock %}
